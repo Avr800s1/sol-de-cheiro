@@ -186,6 +186,102 @@ export const products = [
     benefit: "",
     image: "/produtos/mel.jpg",
     icon: Heart
+  },
+  {
+    name: "Geleia de banho Maracujá",
+    description:
+      "Geleia de banho com aroma frutado e textura sensorial para deixar o banho mais leve e perfumado.",
+    benefit: "",
+    image: "/produtos/geleia-maracuja.jpg",
+    icon: Sparkles
+  },
+  {
+    name: "Geleia de banho Morango",
+    description:
+      "Opção cheirosa e delicada para transformar a rotina em um momento mais doce e divertido.",
+    benefit: "",
+    image: "/produtos/geleia-morango.jpg",
+    icon: Heart
+  },
+  {
+    name: "Geleia de banho Melancia",
+    description:
+      "Textura gostosa e fragrância refrescante para uma experiência de banho cheia de frescor.",
+    benefit: "",
+    image: "/produtos/geleia-melancia.jpg",
+    icon: Sparkles
+  },
+  {
+    name: "Geleia de banho Uva",
+    description:
+      "Aroma marcante e toque sensorial para quem gosta de produtos criativos no autocuidado.",
+    benefit: "",
+    image: "/produtos/geleia-uva.jpg",
+    icon: Sprout
+  },
+  {
+    name: "Geleia de banho Lavanda",
+    description:
+      "Fragrância floral suave para um banho mais acolhedor, delicado e perfumado.",
+    benefit: "",
+    image: "/produtos/geleia-lavanda.jpg",
+    icon: Flower2
+  },
+  {
+    name: "Geleia de banho Capim-limão",
+    description:
+      "Aroma cítrico e refrescante para trazer sensação de leveza ao cuidado diário.",
+    benefit: "",
+    image: "/produtos/geleia-capim-limao.jpg",
+    icon: Leaf
+  },
+  {
+    name: "Kit presente Essencial",
+    description:
+      "Composição delicada para presentear com sabonetes artesanais e uma embalagem especial.",
+    benefit: "",
+    image: "/produtos/kit-presente-essencial.jpg",
+    icon: Gift
+  },
+  {
+    name: "Kit presente Ritual",
+    description:
+      "Um conjunto de autocuidado pensado para transformar o banho em um momento especial.",
+    benefit: "",
+    image: "/produtos/kit-presente-ritual.jpg",
+    icon: PackageCheck
+  },
+  {
+    name: "Kit presente Carinho",
+    description:
+      "Opção generosa e sofisticada para surpreender alguém com o melhor do artesanal.",
+    benefit: "",
+    image: "/produtos/kit-presente-carinho.jpg",
+    icon: Gift
+  },
+  {
+    name: "Kit lembrancinha",
+    description:
+      "Ideal para pequenas lembranças, eventos e datas especiais com toque artesanal.",
+    benefit: "",
+    image: "/produtos/kit-lembrancinha.jpg",
+    icon: PackageCheck
+  },
+  {
+    name: "Kit personalizado",
+    description:
+      "Monte a combinação de produtos, aromas e quantidades de acordo com a ocasião.",
+    benefit: "",
+    image: "/produtos/kit-personalizado.jpg",
+    icon: Gift
+  },
+  {
+    name: "Kit luxo artesanal",
+    description:
+      "Uma seleção especial para presentear com beleza, aroma e cuidado em cada detalhe.",
+    benefit: "",
+    image: "/produtos/kit-luxo-artesanal.jpg",
+    icon: PackageCheck
   }
 ];
 

@@ -18,14 +18,14 @@ export function ProductsScroller({ products }: ProductsScrollerProps) {
   const scrollerId = "products-scroller";
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div
         id={scrollerId}
-        className="grid auto-cols-[100%] grid-flow-col grid-rows-1 gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:thin] sm:auto-cols-[calc((100%-1.25rem)/2)] lg:auto-cols-[calc((100%-2.5rem)/3)] lg:grid-rows-2"
+        className="no-scrollbar grid auto-cols-[100%] snap-x snap-mandatory grid-flow-col grid-rows-1 gap-5 overflow-x-auto overscroll-x-contain scroll-smooth pb-4 sm:auto-cols-[calc((100%_-_1.25rem)/2)] lg:auto-cols-[calc((100%_-_2.5rem)/3)] lg:grid-rows-2"
         aria-label="Produtos principais"
       >
         {products.map((product) => (
-          <div className="min-w-0" key={product.name}>
+          <div className="min-w-0 snap-start" key={product.name}>
             <ProductCard {...product} />
           </div>
         ))}

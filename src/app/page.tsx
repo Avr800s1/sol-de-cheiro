@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, MessageCircle, Play, Sparkles } from "lucide-react";
+import { ArrowDown, MessageCircle, Sparkles } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -79,17 +79,6 @@ export default function Home() {
               </ButtonLink>
             </div>
 
-            <div className="mt-7 grid grid-cols-2 gap-3">
-              {trustHighlights.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div className="rounded-lg border border-black/10 bg-white p-3 shadow-soft" key={item.label}>
-                    <Icon aria-hidden="true" className="h-5 w-5 text-clay" />
-                    <p className="mt-2 text-sm font-bold leading-5 text-ink">{item.label}</p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
 
           <div className="section-shell hidden items-center gap-10 lg:grid lg:grid-cols-[1.02fr_0.98fr]">
@@ -123,17 +112,6 @@ export default function Home() {
                 </ButtonLink>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {trustHighlights.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div className="rounded-lg border border-black/10 bg-white p-3 shadow-soft" key={item.label}>
-                      <Icon aria-hidden="true" className="h-5 w-5 text-clay" />
-                      <p className="mt-2 text-sm font-bold leading-5 text-ink">{item.label}</p>
-                    </div>
-                  );
-                })}
-              </div>
             </div>
 
             <div className="relative">
@@ -316,8 +294,7 @@ export default function Home() {
         <section className="bg-ink py-16 text-white sm:py-20">
           <div className="section-shell">
             <SectionHeader
-              eyebrow="Recomendações"
-              title="Veja quem já conhece a Sol De Cheiro"
+              title="Conheça um pouco da Sol De Cheiro"
               align="center"
               tone="dark"
             />
@@ -336,11 +313,6 @@ export default function Home() {
                     >
                       <source src={item.video} type="video/mp4" />
                     </video>
-                    <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white/5">
-                      <span className="flex h-14 w-14 items-center justify-center rounded-lg bg-sunshine-400 text-ink shadow-glow">
-                        <Play aria-hidden="true" className="h-6 w-6 fill-current" />
-                      </span>
-                    </div>
                   </div>
                   <div className="p-4">
                     <h3 className="text-base font-black text-white">{item.title}</h3>
