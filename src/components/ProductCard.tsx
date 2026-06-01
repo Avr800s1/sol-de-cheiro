@@ -33,8 +33,8 @@ export function ProductCard({ name, description, benefit, icon: Icon, image }: P
           <span className="text-sm font-black leading-tight">R$ 19,99</span>
           <Icon aria-hidden="true" className="sr-only" />
         </div>
-        <h3 className="mt-5 text-xl font-black text-ink">{name}</h3>
-        <p className="mt-3 leading-7 text-ink/70">{description}</p>
+        <h3 className="mt-5 min-h-14 line-clamp-2 text-xl font-black text-ink sm:min-h-0 sm:line-clamp-none">{name}</h3>
+        <p className="mt-3 min-h-28 line-clamp-4 leading-7 text-ink/70 sm:min-h-0 sm:line-clamp-none">{description}</p>
         {benefit ? (
           <p className="mt-4 rounded-lg bg-cream p-4 text-sm font-semibold leading-6 text-ink">
             {benefit}
