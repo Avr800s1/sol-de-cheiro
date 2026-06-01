@@ -14,21 +14,21 @@ type ProductCardProps = {
 
 export function ProductCard({ name, description, benefit, icon: Icon, image }: ProductCardProps) {
   return (
-    <article className="overflow-hidden rounded-lg border border-black/10 bg-white shadow-soft transition hover:-translate-y-1 hover:border-sunshine-400">
+    <article className="flex h-full flex-col overflow-hidden rounded-lg border border-black/10 bg-white shadow-soft transition hover:-translate-y-1 hover:border-sunshine-400">
       {image ? (
         <Image
           src={image}
           alt={`Foto de ${name} da Sol De Cheiro`}
           width={720}
           height={520}
-          className="aspect-[4/3] w-full object-cover"
+          className="aspect-[4/3] w-full bg-cream object-contain"
         />
       ) : (
         <div className="flex aspect-[4/3] items-center justify-center bg-sunshine-100 text-ink">
           <Icon aria-hidden="true" className="h-12 w-12" />
         </div>
       )}
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         <div className="inline-flex min-h-12 items-center justify-center rounded-lg bg-sunshine-100 px-3 py-2 text-ink">
           <span className="text-sm font-black leading-tight">R$ 19,99</span>
           <Icon aria-hidden="true" className="sr-only" />
@@ -40,7 +40,7 @@ export function ProductCard({ name, description, benefit, icon: Icon, image }: P
             {benefit}
           </p>
         ) : null}
-        <ButtonLink href={contact.whatsapp} icon={MessageCircle} variant="secondary" className="mt-5 w-full">
+        <ButtonLink href={contact.whatsapp} icon={MessageCircle} variant="secondary" className="mt-auto w-full pt-3">
           Comprar agora
         </ButtonLink>
       </div>

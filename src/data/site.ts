@@ -112,7 +112,7 @@ export const products = [
     description:
       "Detox profundo para peles oleosas e com cravos. Absorve impurezas, controla a oleosidade e afina os poros — limpeza que dá resultado visível.",
     benefit: "",
-    image: "/produtos/argila-verde.jpg",
+    image: "/produtos/argila-verde.webp",
     icon: Leaf
   },
   {
@@ -192,7 +192,7 @@ export const products = [
     description:
       "Geleia de banho com aroma frutado e textura sensorial para deixar o banho mais leve e perfumado.",
     benefit: "",
-    image: "/produtos/geleia-maracuja.jpg",
+    image: "/produtos/geleia-maracuja.webp",
     icon: Sparkles
   },
   {
@@ -208,7 +208,7 @@ export const products = [
     description:
       "Textura gostosa e fragrância refrescante para uma experiência de banho cheia de frescor.",
     benefit: "",
-    image: "/produtos/geleia-melancia.jpg",
+    image: "/produtos/geleia-melancia.webp",
     icon: Sparkles
   },
   {
@@ -351,15 +351,15 @@ export const kits = [
 
 export const recommendations = [
   {
-    title: "Recomendação 1",
+    title: "Vídeo 1",
     video: "/recomendacoes/video-1.mp4"
   },
   {
-    title: "Recomendação 2",
+    title: "Vídeo 2",
     video: "/recomendacoes/video-2.mp4"
   },
   {
-    title: "Recomendação 3",
+    title: "Vídeo 3",
     video: "/recomendacoes/video-3.mp4"
   }
 ];

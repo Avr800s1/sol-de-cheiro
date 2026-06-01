@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InfoCard } from "@/components/InfoCard";
 import { ProductsScroller } from "@/components/ProductsScroller";
+import { ScrollButtons } from "@/components/ScrollButtons";
 import { SectionHeader } from "@/components/SectionHeader";
 import {
   benefits,
@@ -25,7 +26,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <section id="inicio" className="relative overflow-hidden py-14 sm:py-20 lg:py-24">
+        <section id="inicio" className="relative scroll-mt-28 overflow-hidden py-14 sm:py-16 lg:py-9">
           <div className="section-shell lg:hidden">
             <p className="mb-4 inline-flex items-center gap-2 rounded-lg border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-clay shadow-soft">
               <Sparkles aria-hidden="true" className="h-4 w-4 text-sunshine-500" />
@@ -135,7 +136,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="produtos" className="bg-white py-16 sm:py-20">
+        <section id="produtos" className="scroll-mt-28 bg-white pb-6 pt-16 sm:pb-8 sm:pt-20">
           <div className="section-shell">
             <SectionHeader
               eyebrow="Produtos principais"
@@ -149,7 +150,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="kits" className="py-16 sm:py-20">
+        <section id="kits" className="scroll-mt-28 pb-16 pt-6 sm:pb-20 sm:pt-8">
           <div className="section-shell">
             <SectionHeader
               eyebrow="Kits"
@@ -157,27 +158,36 @@ export default function Home() {
               description="Escolha uma composição pronta ou personalize com a Sol De Cheiro pelo WhatsApp."
               align="center"
             />
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {kits.map((kit) => (
-                <article
-                  className="rounded-lg border border-black/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-sunshine-400"
-                  key={kit.name}
-                >
-                  <p className="inline-flex rounded-lg bg-sunshine-100 px-3 py-2 text-sm font-black text-ink">
-                    {kit.price}
-                  </p>
-                  <h3 className="mt-5 text-xl font-black text-ink">{kit.name}</h3>
-                  <p className="mt-3 whitespace-pre-line leading-7 text-ink/70">{kit.description}</p>
-                  <ButtonLink href={contact.whatsapp} icon={MessageCircle} variant="secondary" className="mt-5 w-full">
-                    Comprar agora
-                  </ButtonLink>
-                </article>
-              ))}
+            <div className="relative mt-10 px-0 md:px-0">
+              <div
+                id="kits-scroller"
+                className="no-scrollbar grid auto-cols-[100%] snap-x snap-mandatory grid-flow-col gap-5 overflow-x-auto overscroll-x-contain scroll-smooth pb-2 md:grid-flow-row md:grid-cols-3 md:overflow-visible"
+                aria-label="Kits artesanais"
+              >
+                {kits.map((kit) => (
+                  <article
+                    className="flex h-full snap-start flex-col rounded-lg border border-black/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-sunshine-400"
+                    key={kit.name}
+                  >
+                    <p className="inline-flex self-start rounded-lg bg-sunshine-100 px-3 py-2 text-sm font-black text-ink">
+                      {kit.price}
+                    </p>
+                    <h3 className="mt-5 text-xl font-black text-ink">{kit.name}</h3>
+                    <p className="mt-3 whitespace-pre-line leading-7 text-ink/70">{kit.description}</p>
+                    <ButtonLink href={contact.whatsapp} icon={MessageCircle} variant="secondary" className="mt-auto w-full pt-5">
+                      Comprar agora
+                    </ButtonLink>
+                  </article>
+                ))}
+              </div>
+              <div className="md:hidden">
+                <ScrollButtons targetId="kits-scroller" label="Kits" />
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="beneficios" className="bg-ink py-16 text-white sm:py-20">
+        <section id="beneficios" className="scroll-mt-28 bg-ink py-16 text-white sm:py-20">
           <div className="section-shell">
             <SectionHeader
               eyebrow="Benefícios"
@@ -193,7 +203,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="como-comprar" className="bg-white py-16 sm:py-20">
+        <section id="como-comprar" className="scroll-mt-28 bg-white py-16 sm:py-20">
           <div className="section-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
               <SectionHeader
@@ -298,13 +308,13 @@ export default function Home() {
               align="center"
               tone="dark"
             />
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-3">
               {recommendations.map((item) => (
                 <article
                   className="overflow-hidden rounded-lg border border-white/10 bg-white/5 shadow-soft"
                   key={item.title}
                 >
-                  <div className="relative aspect-[9/16] bg-black">
+                  <div className="relative aspect-[3/4] bg-black">
                     <video
                       className="h-full w-full object-cover"
                       controls
@@ -323,7 +333,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" className="bg-white py-16 sm:py-20">
+        <section id="faq" className="scroll-mt-28 bg-white py-16 sm:py-20">
           <div className="section-shell grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
             <SectionHeader
               eyebrow="FAQ"
