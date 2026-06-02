@@ -26,6 +26,18 @@ export function Header() {
           </span>
         </a>
 
+        <nav className="hidden items-center justify-center gap-4 text-xs font-semibold text-ink/75 lg:flex xl:gap-5" aria-label="Menu principal">
+          {navItems.map((item) => (
+            <a
+              className="focus-ring rounded-lg transition hover:text-ink"
+              href={item.href}
+              key={item.href}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
         <ButtonLink href={contact.whatsapp} icon={MessageCircle} className="hidden sm:inline-flex">
           Comprar pelo WhatsApp
         </ButtonLink>
@@ -40,20 +52,6 @@ export function Header() {
           {isMenuOpen ? <X aria-hidden="true" className="h-5 w-5" /> : <Menu aria-hidden="true" className="h-5 w-5" />}
         </button>
       </div>
-
-      <nav className="hidden border-t border-black/5 bg-white/60 lg:block" aria-label="Menu principal">
-        <div className="section-shell flex items-center justify-center gap-6 py-3 text-sm font-semibold text-ink/75">
-          {navItems.map((item) => (
-            <a
-              className="focus-ring rounded-lg transition hover:text-ink"
-              href={item.href}
-              key={item.href}
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </nav>
 
       {isMenuOpen ? (
         <nav className="section-shell grid grid-cols-2 gap-2 pb-3 text-sm font-semibold text-ink/70 lg:hidden" aria-label="Menu principal mobile">

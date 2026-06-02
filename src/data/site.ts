@@ -57,7 +57,7 @@ export const navItems = [
   { label: "Como comprar", href: "/#como-comprar" },
   { label: "FAQ", href: "/#faq" },
   { label: "Cursos", href: "/cursos" },
-  { label: "Seja um revendedor Sol De Cheiro", href: "/revendedor" }
+  { label: "Seja um revendedor", href: "/revendedor" }
 ];
 
 export const products = [

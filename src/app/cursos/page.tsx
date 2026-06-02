@@ -45,15 +45,26 @@ export default function CursosPage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-lg border border-black/10 bg-white shadow-soft">
-              <video
-                className="aspect-[4/3] w-full bg-black object-cover"
-                controls
-                preload="metadata"
-                aria-label="Apresentação do curso de saboaria artesanal para iniciantes"
+            <div>
+              <div className="flex justify-center overflow-hidden rounded-lg border border-black/10 bg-black shadow-soft">
+                <video
+                  className="aspect-[4/3] w-full bg-black object-contain"
+                  controls
+                  preload="metadata"
+                  aria-label="Apresentação do curso de saboaria artesanal para iniciantes"
+                >
+                  <source src="/cursos/curso-iniciantes.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <a
+                className="focus-ring mx-auto mt-5 flex w-fit items-center justify-center gap-2 rounded-lg bg-sunshine-400 px-6 py-3 text-sm font-bold text-ink shadow-glow transition hover:bg-sunshine-300"
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
               >
-                <source src="/cursos/curso-iniciantes.mp4" type="video/mp4" />
-              </video>
+                <span>Renda extra Agora</span>
+                <MessageCircle aria-hidden="true" className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>
