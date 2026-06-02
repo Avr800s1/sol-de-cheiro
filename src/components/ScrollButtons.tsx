@@ -15,8 +15,15 @@ export function ScrollButtons({ targetId, label }: ScrollButtonsProps) {
       return;
     }
 
-    scroller.scrollBy({
-      left: direction === "right" ? scroller.clientWidth : -scroller.clientWidth,
+    const cards = Array.from(scroller.children) as HTMLElement[];
+    const currentPosition = scroller.scrollLeft;
+    const target =
+      direction === "right"
+        ? cards.find((card) => card.offsetLeft > currentPosition + 2)
+        : [...cards].reverse().find((card) => card.offsetLeft < currentPosition - 2);
+
+    scroller.scrollTo({
+      left: target?.offsetLeft ?? (direction === "right" ? scroller.scrollWidth : 0),
       behavior: "smooth"
     });
   }

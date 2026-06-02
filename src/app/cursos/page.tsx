@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BookOpen, CheckCircle2, MessageCircle, Sparkles, Users } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -47,14 +46,14 @@ export default function CursosPage() {
             </div>
 
             <div className="overflow-hidden rounded-lg border border-black/10 bg-white shadow-soft">
-              <Image
-                src="/produtos/acafrao.jpg"
-                alt="Sabonetes artesanais Sol De Cheiro"
-                width={721}
-                height={960}
-                priority
-                className="aspect-[4/3] w-full object-cover"
-              />
+              <video
+                className="aspect-[4/3] w-full bg-black object-cover"
+                controls
+                preload="metadata"
+                aria-label="Apresentação do curso de saboaria artesanal para iniciantes"
+              >
+                <source src="/cursos/curso-iniciantes.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </section>
