@@ -28,13 +28,13 @@ export function ProductCard({ name, description, benefit, icon: Icon, image }: P
           <Icon aria-hidden="true" className="h-12 w-12" />
         </div>
       )}
-      <div className="flex flex-1 flex-col p-6">
-        <div className="inline-flex min-h-12 items-center justify-center rounded-lg bg-sunshine-100 px-3 py-2 text-ink">
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
+        <div className="inline-flex min-h-10 items-center justify-center rounded-lg bg-sunshine-100 px-3 py-2 text-ink sm:min-h-12">
           <span className="text-sm font-black leading-tight">R$ 19,99</span>
           <Icon aria-hidden="true" className="sr-only" />
         </div>
-        <h3 className="mt-5 min-h-14 line-clamp-2 text-xl font-black text-ink sm:min-h-0 sm:line-clamp-none">{name}</h3>
-        <p className="mt-3 min-h-28 line-clamp-4 leading-7 text-ink/70 sm:min-h-0 sm:line-clamp-none">{description}</p>
+        <h3 className="mt-4 min-h-12 line-clamp-2 text-lg font-black text-ink sm:mt-5 sm:min-h-0 sm:text-xl sm:line-clamp-none">{name}</h3>
+        <p className="mt-2 min-h-24 line-clamp-4 text-sm leading-6 text-ink/70 sm:mt-3 sm:min-h-0 sm:text-base sm:leading-7 sm:line-clamp-none">{description}</p>
         {benefit ? (
           <p className="mt-4 rounded-lg bg-cream p-4 text-sm font-semibold leading-6 text-ink">
             {benefit}

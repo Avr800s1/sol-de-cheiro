@@ -50,12 +50,14 @@ export const socialLinks = [
 ];
 
 export const navItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Produtos", href: "#produtos" },
-  { label: "Kits", href: "#kits" },
-  { label: "Benefícios", href: "#beneficios" },
-  { label: "Como comprar", href: "#como-comprar" },
-  { label: "FAQ", href: "#faq" }
+  { label: "Início", href: "/#inicio" },
+  { label: "Produtos", href: "/#produtos" },
+  { label: "Kits", href: "/#kits" },
+  { label: "Benefícios", href: "/#beneficios" },
+  { label: "Como comprar", href: "/#como-comprar" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Cursos", href: "/cursos" },
+  { label: "Seja um revendedor Sol De Cheiro", href: "/revendedor" }
 ];
 
 export const products = [
