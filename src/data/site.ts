@@ -328,24 +328,22 @@ export const benefits = [
   }
 ];
 
-export const kits = [
+export const customKitItems = [
   {
-    name: "Kit Essencial",
-    description:
-      "2 sabonetes artesanais em uma embalagem pensada e cuidadosamente preparada. Perfeito para quem quer experimentar o cuidado artesanal ou dar um mimo simples e cheio de carinho.\n\nInclui: 2 sabonetes + embalagem",
-    price: "A partir de R$ 39,99"
+    name: "Sabonete artesanal",
+    price: 20
   },
   {
-    name: "Kit Ritual de Cuidado",
-    description:
-      "Uma experiência completa de autocuidado reunida em um só kit. Cada item foi pensado para transformar sua rotina em um momento especial.\n\nInclui: 3 sabonetes + 1 geleia de banho + bucha + escalda pés + embalagem",
-    price: "A partir de R$ 49,99"
+    name: "Geleia de banho",
+    price: 18
   },
   {
-    name: "Kit Carinho Artesanal",
-    description:
-      "O kit mais completo da linha. Generoso, sofisticado e perfeito para presentear quem você ama com o melhor do artesanal. Vem com brinde surpresa!\n\nInclui: 4 sabonetes + 2 geleias de banho + 2 buchas + escalda pés + brinde + embalagem",
-    price: "Sob consulta"
+    name: "Shampoo sólido",
+    price: 20
+  },
+  {
+    name: "Bucha",
+    price: 3
   }
 ];
 

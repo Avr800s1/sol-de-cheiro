@@ -1,18 +1,17 @@
 import Image from "next/image";
 import { ArrowDown, MessageCircle, Sparkles } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
+import { CustomKitBuilder } from "@/components/CustomKitBuilder";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { InfoCard } from "@/components/InfoCard";
 import { ProductsScroller } from "@/components/ProductsScroller";
-import { ScrollButtons } from "@/components/ScrollButtons";
 import { SectionHeader } from "@/components/SectionHeader";
 import {
   benefits,
   comparison,
   contact,
   faqs,
-  kits,
   monthlyHighlight,
   products,
   recommendations,
@@ -154,35 +153,12 @@ export default function Home() {
           <div className="section-shell">
             <SectionHeader
               eyebrow="Kits"
-              title="Kits artesanais para presentear ou transformar sua rotina"
-              description="Escolha uma composição pronta ou personalize com a Sol De Cheiro pelo WhatsApp."
+              title="Monte um kit artesanal do seu jeito"
+              description="Escolha os produtos, ajuste as quantidades e envie sua seleção diretamente para a Sol De Cheiro pelo WhatsApp."
               align="center"
             />
-            <div className="relative mt-10 px-0 md:px-0">
-              <div
-                id="kits-scroller"
-                className="no-scrollbar grid auto-cols-[100%] snap-x snap-mandatory grid-flow-col gap-5 overflow-x-auto overscroll-x-contain scroll-smooth pb-2 md:grid-flow-row md:grid-cols-3 md:overflow-visible"
-                aria-label="Kits artesanais"
-              >
-                {kits.map((kit) => (
-                  <article
-                    className="flex h-full snap-start flex-col rounded-lg border border-black/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:border-sunshine-400"
-                    key={kit.name}
-                  >
-                    <p className="inline-flex self-start rounded-lg bg-sunshine-100 px-3 py-2 text-sm font-black text-ink">
-                      {kit.price}
-                    </p>
-                    <h3 className="mt-5 text-xl font-black text-ink">{kit.name}</h3>
-                    <p className="mt-3 whitespace-pre-line leading-7 text-ink/70">{kit.description}</p>
-                    <ButtonLink href={contact.whatsapp} icon={MessageCircle} variant="secondary" className="mt-auto w-full pt-5">
-                      Comprar agora
-                    </ButtonLink>
-                  </article>
-                ))}
-              </div>
-              <div className="md:hidden">
-                <ScrollButtons targetId="kits-scroller" label="Kits" />
-              </div>
+            <div className="mt-10">
+              <CustomKitBuilder />
             </div>
           </div>
         </section>
