@@ -238,20 +238,20 @@ export const products = [
     icon: Leaf
   },
   {
-    name: "Kit presente Essencial",
+    name: "Shampoo sólido hidratante",
     description:
-      "Composição delicada para presentear com sabonetes artesanais e uma embalagem especial.",
+      "Limpeza suave com cuidado hidratante para deixar os fios macios, leves e com aparência saudável.",
     benefit: "",
     image: "/produtos/kit-presente-essencial.jpg",
-    icon: Gift
+    icon: Leaf
   },
   {
-    name: "Kit presente Ritual",
+    name: "Shampoo sólido fortalecimento",
     description:
-      "Um conjunto de autocuidado pensado para transformar o banho em um momento especial.",
+      "Cuidado diário para fortalecer os fios, reduzir a quebra e manter o cabelo bonito e resistente.",
     benefit: "",
     image: "/produtos/kit-presente-ritual.jpg",
-    icon: PackageCheck
+    icon: Sprout
   },
   {
     name: "Kit presente Carinho",
