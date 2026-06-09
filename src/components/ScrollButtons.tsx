@@ -15,27 +15,16 @@ export function ScrollButtons({ targetId, label }: ScrollButtonsProps) {
       return;
     }
 
-    const cards = Array.from(scroller.children) as HTMLElement[];
-    const currentPosition = scroller.scrollLeft;
-    const scrollerLeft = scroller.getBoundingClientRect().left;
-    const cardPositions = cards.map(
-      (card) => card.getBoundingClientRect().left - scrollerLeft + currentPosition
-    );
-    const target =
-      direction === "right"
-        ? cardPositions.find((position) => position > currentPosition + 2)
-        : [...cardPositions].reverse().find((position) => position < currentPosition - 2);
-
-    scroller.scrollTo({
-      left: target ?? (direction === "right" ? scroller.scrollWidth : 0),
-      behavior: "smooth"
+    scroller.scrollBy({
+      left: direction === "right" ? scroller.clientWidth : -scroller.clientWidth,
+      behavior: "smooth",
     });
   }
 
   return (
     <>
       <button
-        className="focus-ring absolute left-0 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-lg bg-ink text-white shadow-soft transition hover:-translate-y-[calc(50%+2px)] hover:bg-black sm:flex"
+        className="focus-ring absolute left-0 top-1/4 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-lg bg-ink text-white shadow-soft transition hover:-translate-y-[calc(50%+2px)] hover:bg-black sm:flex"
         type="button"
         onClick={() => scroll("left")}
         aria-label={`${label} anteriores`}
@@ -44,7 +33,7 @@ export function ScrollButtons({ targetId, label }: ScrollButtonsProps) {
       </button>
 
       <button
-        className="focus-ring absolute right-0 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-lg bg-sunshine-400 text-ink shadow-glow transition hover:-translate-y-[calc(50%+2px)] hover:bg-sunshine-300 sm:flex"
+        className="focus-ring absolute right-0 top-1/4 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-lg bg-sunshine-400 text-ink shadow-glow transition hover:-translate-y-[calc(50%+2px)] hover:bg-sunshine-300 sm:flex"
         type="button"
         onClick={() => scroll("right")}
         aria-label={`Ver mais ${label.toLowerCase()}`}
