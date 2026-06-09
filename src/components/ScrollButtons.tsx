@@ -17,13 +17,17 @@ export function ScrollButtons({ targetId, label }: ScrollButtonsProps) {
 
     const cards = Array.from(scroller.children) as HTMLElement[];
     const currentPosition = scroller.scrollLeft;
+    const scrollerLeft = scroller.getBoundingClientRect().left;
+    const cardPositions = cards.map(
+      (card) => card.getBoundingClientRect().left - scrollerLeft + currentPosition
+    );
     const target =
       direction === "right"
-        ? cards.find((card) => card.offsetLeft > currentPosition + 2)
-        : [...cards].reverse().find((card) => card.offsetLeft < currentPosition - 2);
+        ? cardPositions.find((position) => position > currentPosition + 2)
+        : [...cardPositions].reverse().find((position) => position < currentPosition - 2);
 
     scroller.scrollTo({
-      left: target?.offsetLeft ?? (direction === "right" ? scroller.scrollWidth : 0),
+      left: target ?? (direction === "right" ? scroller.scrollWidth : 0),
       behavior: "smooth"
     });
   }

@@ -1,0 +1,6 @@
+node_modules/
+.next/
+.next-sol-de-cheiro/
+.npm-cache/
+dev-server.log
+work/
